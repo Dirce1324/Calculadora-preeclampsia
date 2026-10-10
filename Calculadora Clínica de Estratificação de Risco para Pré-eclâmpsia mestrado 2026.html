@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)file:///C:/Users/USU%C3%81RIO/Downloads/CACU_calculadora_MS_2022.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora Clínica de Estratificação de Risco para Pré-eclâmpsia</title>
+<style>
+:root{--blue:#073b78;--red:#b51217;--orange:#9a4300;--green:#08743e;--light:#f7fbff;--line:#d9e2ec}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f7fa;color:#14213d}
+.wrap{max-width:1100px;margin:auto;padding:24px}.head{display:flex;gap:24px;align-items:center;background:white;padding:20px;border-radius:18px}
+.logo{min-width:130px;text-align:center;font-weight:800;color:#123}.logo .uft{font-size:42px;color:#667}.logo small{display:block;font-size:12px}
+h1{color:var(--blue);font-size:34px;line-height:1.05;margin:0 0 8px}.sub{font-size:18px;margin:0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}.card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.card.high{border-color:#f2a2a2}.card.mod{border-color:#efc260}.section-head{padding:14px 16px}.high .section-head{background:#fff0f0}.mod .section-head{background:#fff7df}
+.section-head h2{margin:0 0 5px;font-size:23px}.high h2{color:var(--red)}.mod h2{color:var(--orange)}.section-head p{margin:0}
+.row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:11px 16px;border-top:1px solid var(--line);min-height:54px}
+.opts{white-space:nowrap}.opts label{margin-left:12px;cursor:pointer}.opts input{transform:scale(1.2);margin-right:5px}
+.actions{display:grid;grid-template-columns:1.4fr 1fr;gap:12px;margin:16px 0}.btn{border:0;border-radius:12px;padding:16px;font-size:21px;font-weight:800;cursor:pointer}
+.calc{background:#075b9b;color:white}.clear{background:#e4e7eb;color:#111}
+.result{display:none;background:white;border-radius:16px;padding:18px;border:2px solid;margin-top:8px}.result.show{display:block}
+.result h2{text-align:center;font-size:34px;margin:0 0 16px}.habit{border-color:#37a66b}.habit h2{color:var(--green)}.alto{border-color:#e43b3b}.alto h2{color:#cf1717}
+.recs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.alto .recs{grid-template-columns:repeat(4,1fr)}
+.rec{background:#fbfdff;border:1px solid #dce6ef;border-radius:12px;padding:14px}.rec h3{color:#075b9b;margin:0 0 8px;font-size:18px}.rec p,.rec li{line-height:1.35}.rec ul{padding-left:20px;margin:6px 0}
+.aas strong{font-size:20px}.foot{background:#e9f6ff;border:1px solid #7cc7f4;border-radius:10px;padding:12px;margin-top:16px}.disclaimer{text-align:center;margin:12px 0 0;color:#344}
+@media(max-width:800px){.grid,.actions,.recs,.alto .recs{grid-template-columns:1fr}.head{align-items:flex-start}.logo{display:none}h1{font-size:28px}.row{grid-template-columns:1fr}.opts label{margin-left:0;margin-right:18px}}
+@media print{body{background:white}.wrap{max-width:none}.actions{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="head"><div class="logo"><div class="uft">UFT</div><small>UNIVERSIDADE FEDERAL<br>DO TOCANTINS</small></div><div><h1>Calculadora Clínica de Estratificação de Risco para Pré-eclâmpsia</h1><p class="sub">Ferramenta de apoio para identificação de gestantes com necessidade de medidas preventivas para pré-eclâmpsia, com base em fatores clínicos de risco.</p></div></div>
+
+<form id="form">
+<div class="grid">
+<section class="card high"><div class="section-head"><h2>Fatores de risco maiores (alto risco)</h2><p>A presença de um único fator de alto risco é suficiente para indicar profilaxia para pré-eclâmpsia.</p></div>
+<div id="high"><div class="row"><div>História de pré-eclâmpsia em gestação anterior, principalmente acompanhada de desfechos adversos</div><div class="opts"><label><input type="radio" name="h0" value="1"> Sim</label><label><input type="radio" name="h0" value="0"> Não</label></div></div><div class="row"><div>Gestação múltipla</div><div class="opts"><label><input type="radio" name="h1" value="1"> Sim</label><label><input type="radio" name="h1" value="0"> Não</label></div></div><div class="row"><div>Obesidade (IMC &gt; 30 kg/m²)</div><div class="opts"><label><input type="radio" name="h2" value="1"> Sim</label><label><input type="radio" name="h2" value="0"> Não</label></div></div><div class="row"><div>Hipertensão arterial crônica</div><div class="opts"><label><input type="radio" name="h3" value="1"> Sim</label><label><input type="radio" name="h3" value="0"> Não</label></div></div><div class="row"><div>Diabetes mellitus tipo 1 ou tipo 2</div><div class="opts"><label><input type="radio" name="h4" value="1"> Sim</label><label><input type="radio" name="h4" value="0"> Não</label></div></div><div class="row"><div>Doença renal crônica</div><div class="opts"><label><input type="radio" name="h5" value="1"> Sim</label><label><input type="radio" name="h5" value="0"> Não</label></div></div><div class="row"><div>Doença autoimune (ex.: lúpus eritematoso sistêmico – LES e/ou síndrome do anticorpo antifosfolípide – SAF)</div><div class="opts"><label><input type="radio" name="h6" value="1"> Sim</label><label><input type="radio" name="h6" value="0"> Não</label></div></div></div></section>
+<section class="card mod"><div class="section-head"><h2>Fatores de risco menores (risco moderado)</h2><p>Na ausência de fatores de alto risco, dois ou mais fatores de risco moderado caracterizam indicação de profilaxia.</p></div>
+<div id="moderate"><div class="row"><div>Nuliparidade</div><div class="opts"><label><input type="radio" name="m0" value="1"> Sim</label><label><input type="radio" name="m0" value="0"> Não</label></div></div><div class="row"><div>História familiar de pré-eclâmpsia (mãe e/ou irmãs)</div><div class="opts"><label><input type="radio" name="m1" value="1"> Sim</label><label><input type="radio" name="m1" value="0"> Não</label></div></div><div class="row"><div>Idade materna ≥ 35 anos</div><div class="opts"><label><input type="radio" name="m2" value="1"> Sim</label><label><input type="radio" name="m2" value="0"> Não</label></div></div><div class="row"><div>Etnia afrodescendente</div><div class="opts"><label><input type="radio" name="m3" value="1"> Sim</label><label><input type="radio" name="m3" value="0"> Não</label></div></div><div class="row"><div>Baixo nível socioeconômico</div><div class="opts"><label><input type="radio" name="m4" value="1"> Sim</label><label><input type="radio" name="m4" value="0"> Não</label></div></div><div class="row"><div>Intervalo maior 10 anos desde a última gestação</div><div class="opts"><label><input type="radio" name="m5" value="1"> Sim</label><label><input type="radio" name="m5" value="0"> Não</label></div></div><div class="row"><div>Gravidez prévia com desfecho adverso</div><div class="opts"><label><input type="radio" name="m6" value="1"> Sim</label><label><input type="radio" name="m6" value="0"> Não</label></div></div><div class="row"><div>História pessoal de baixo peso ao nascer</div><div class="opts"><label><input type="radio" name="m7" value="1"> Sim</label><label><input type="radio" name="m7" value="0"> Não</label></div></div></div></section>
+</div>
+<div class="actions"><button class="btn calc" type="button" onclick="calcular()">Calcular risco</button><button class="btn clear" type="button" onclick="limpar()">Limpar</button></div><div id="avisoCampos" style="display: none; background: rgb(255, 243, 205); border: 1px solid rgb(226, 185, 59); color: rgb(102, 77, 3); padding: 14px 16px; border-radius: 10px; margin: 0px 0px 16px; font-weight: 700; text-align: center;"></div>
+</form>
+
+<section id="habit" class="result habit">
+<h2>RISCO HABITUAL</h2>
+<div class="recs">
+<div class="rec"><h3>Cálcio</h3><p><strong>1 a 1,5 g/dia</strong>, via oral, dividido em 2 a 3 doses, especialmente em populações com baixa ingestão dietética de cálcio.</p></div>
+<div class="rec"><h3>Orientações de alimentação</h3><ul><li>Dieta equilibrada e variada, rica em frutas, verduras, legumes, grãos integrais, leite e derivados.</li><li>Adequada ingestão de cálcio.</li><li>Reduzir alimentos ultraprocessados ricos em sódio, gorduras saturadas e açúcares.</li><li>Manter ganho de peso adequado para a gestação.</li><li>Hidratação adequada.</li></ul></div>
+<div class="rec"><h3>Orientações de atividade física</h3><ul><li>Atividade física moderada conforme orientação profissional e condições clínicas.</li><li>Pelo menos 150 minutos por semana de atividade aeróbica de intensidade leve a moderada, quando não houver contraindicação.</li><li>Evitar sedentarismo e períodos prolongados na posição sentada.</li><li>Individualizar conforme avaliação clínica.</li></ul></div>
+</div></section>
+
+<section id="alto" class="result alto">
+<h2>ALTO RISCO PARA PRÉ-ECLÂMPSIA</h2>
+<div class="recs">
+<div class="rec aas"><h3>Ácido acetilsalicílico (AAS)</h3><p><strong>100 mg, via oral, 1 vez ao dia, À NOITE.</strong></p><p>Iniciar com <strong>12 semanas</strong> de gestação e manter até <strong>36 semanas</strong>.</p></div>
+<div class="rec"><h3>Cálcio</h3><p><strong>1 a 1,5 g/dia</strong>, via oral, dividido em 2 a 3 doses, especialmente em populações com baixa ingestão dietética de cálcio.</p></div>
+<div class="rec"><h3>Orientações de alimentação</h3><ul><li>Dieta equilibrada e variada, rica em frutas, verduras, legumes, grãos integrais, leite e derivados.</li><li>Adequada ingestão de cálcio.</li><li>Reduzir alimentos ultraprocessados ricos em sódio, gorduras saturadas e açúcares.</li><li>Manter ganho de peso adequado para a gestação.</li><li>Hidratação adequada.</li></ul></div>
+<div class="rec"><h3>Orientações de atividade física</h3><ul><li>Atividade física moderada conforme orientação profissional e condições clínicas.</li><li>Pelo menos 150 minutos por semana de atividade aeróbica de intensidade leve a moderada, quando não houver contraindicação.</li><li>Evitar sedentarismo e períodos prolongados na posição sentada.</li><li>Individualizar conforme avaliação clínica.</li></ul></div>
+</div></section>
+
+<div class="foot"><strong>Critério para prevenção:</strong> a presença de um fator de alto risco ou de dois ou mais fatores de risco moderado identifica gestantes com necessidade de medidas preventivas para pré-eclâmpsia.<br><strong>Fonte:</strong> Ministério da Saúde. Manual de Gestação de Alto Risco. Brasília, 2022.</div>
+<p class="disclaimer">Esta ferramenta é de apoio à decisão clínica e não substitui avaliação médica e acompanhamento pré-natal.</p>
+</div>
+<script>
+const high=[
+"História de pré-eclâmpsia em gestação anterior, principalmente acompanhada de desfechos adversos","Gestação múltipla","Obesidade (IMC > 30 kg/m²)","Hipertensão arterial crônica","Diabetes mellitus tipo 1 ou tipo 2","Doença renal crônica","Doença autoimune (ex.: lúpus eritematoso sistêmico – LES e/ou síndrome do anticorpo antifosfolípide – SAF)"
+];
+const moderate=[
+"Nuliparidade","História familiar de pré-eclâmpsia (mãe e/ou irmãs)","Idade materna ≥ 35 anos","Etnia afrodescendente","Baixo nível socioeconômico","Intervalo maior 10 anos desde a última gestação","Gravidez prévia com desfecho adverso","História pessoal de baixo peso ao nascer"
+];
+function rows(arr,type){return arr.map((x,i)=>`<div class="row"><div>${x}</div><div class="opts"><label><input type="radio" name="${type}${i}" value="1"> Sim</label><label><input type="radio" name="${type}${i}" value="0"> Não</label></div></div>`).join("")}
+document.getElementById("high").innerHTML=rows(high,"h");
+document.getElementById("moderate").innerHTML=rows(moderate,"m");
+function count(prefix,n){let c=0;for(let i=0;i<n;i++){let el=document.querySelector(`input[name="${prefix}${i}"]:checked`);if(el&&el.value==="1")c++;}return c}
+function calcular(){
+ const total = high.length + moderate.length;
+ const marcadas = document.querySelectorAll('#form input[type="radio"]:checked').length;
+ document.getElementById("habit").classList.remove("show");
+ document.getElementById("alto").classList.remove("show");
+
+ let aviso = document.getElementById("avisoCampos");
+ if(!aviso){
+   aviso=document.createElement("div");
+   aviso.id="avisoCampos";
+   aviso.style.cssText="display:none;background:#fff3cd;border:1px solid #e2b93b;color:#664d03;padding:14px 16px;border-radius:10px;margin:0 0 16px;font-weight:700;text-align:center;";
+   document.querySelector(".actions").insertAdjacentElement("afterend",aviso);
+ }
+ if(marcadas < total){
+   aviso.textContent=`Preencha todas as variáveis antes de calcular o risco. Faltam ${total-marcadas} resposta(s).`;
+   aviso.style.display="block";
+   aviso.scrollIntoView({behavior:"smooth",block:"center"});
+   return;
+ }
+ aviso.style.display="none";
+ let h=count("h",high.length),m=count("m",moderate.length);
+ let id=(h>=1||m>=2)?"alto":"habit";
+ document.getElementById(id).classList.add("show");
+ document.getElementById(id).scrollIntoView({behavior:"smooth",block:"start"});
+}
+function limpar(){document.getElementById("form").reset();document.getElementById("habit").classList.remove("show");document.getElementById("alto").classList.remove("show");const a=document.getElementById("avisoCampos");if(a)a.style.display="none";window.scrollTo({top:0,behavior:"smooth"})}
+</script>
+</body></html>
